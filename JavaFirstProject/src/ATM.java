@@ -25,7 +25,9 @@ public class ATM {
 
         while (true){
             String  islem = "1.Bakiye getir\n"
-                    +"2. cikis yapmak icin q ya bas";
+                    +"para yatirmak 2 ya bas"
+                    +"para cekmek icin 3 ya bas"
+                    +"4. cikis yapmak icin q ya bas";
             System.out.println(islem);
             System.out.println("===================");
             String str = scanner.nextLine();
@@ -34,6 +36,14 @@ public class ATM {
             }else if(str.equals("1")){
                 System.out.println("Bakiyeniz = "+ hesap.getBase());
 
+            }else if(str.equals("2")){
+                System.out.println("para yatir");
+                int m = scanner.nextInt();
+                hesap.paraYatir(m);
+            }else if(str.equals("3")){
+                System.out.println("cekilecek tutar");
+                int m = scanner.nextInt();
+                hesap.paraCek(m);
             }
         }
 
